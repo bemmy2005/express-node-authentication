@@ -8,7 +8,7 @@ var MongoStore = require('connect-mongo')(session);
 var path=require('path');//addedd to solve path is not defined
 
 //connect to MongoDB
-mongoose.connect('mongodb://localhost/testForAuth');
+mongoose.connect('mongodb://localhost/my-login-and-register');
 var db = mongoose.connection;
 
 //handle mongo error
@@ -65,3 +65,5 @@ app.listen(3000, function () {
 
 ///https://mongoosejs.com/docs/guide.html
 //source:https://medium.com/createdd-notes/starting-with-authentication-a-tutorial-with-node-js-and-mongodb-25d524ca0359
+
+//http://programmerblog.net/using-socketio-with-nodejs/
