@@ -8,7 +8,7 @@ var MongoStore = require('connect-mongo')(session);
 var path=require('path');//addedd to solve path is not defined
 
 //connect to MongoDB
-mongoose.connect('mongodb://localhost/my-login-and-register');
+mongoose.connect('mongodb://localhost/login-and-register');
 var db = mongoose.connection;
 
 //handle mongo error
