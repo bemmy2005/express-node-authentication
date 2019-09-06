@@ -5,6 +5,8 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
+var path=require('path');//addedd to solve path is not defined
+
 //connect to MongoDB
 mongoose.connect('mongodb://localhost/testForAuth');
 var db = mongoose.connection;
@@ -31,7 +33,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 // serve static files from template
-app.use(express.static(__dirname + '/templateLogReg'));
+
+//app.use(express.static(__dirname + '/templateLogReg'));//commented original
+app.use(express.static(path.join(__dirname, 'public')));//to solve path is not defined
 
 // include routes
 var routes = require('./routes/router');
@@ -60,3 +64,4 @@ app.listen(3000, function () {
 
 
 ///https://mongoosejs.com/docs/guide.html
+//source:https://medium.com/createdd-notes/starting-with-authentication-a-tutorial-with-node-js-and-mongodb-25d524ca0359
