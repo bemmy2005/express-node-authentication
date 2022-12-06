@@ -19,9 +19,9 @@
   "homepage": "https://github.com/bemmy2005/express-node-authentication#readme",
   "dependencies": {
     "bcrypt": "^3.0.6",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "connect-mongo": "^3.0.0",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-session": "^1.16.2",
     "mongoose": "^5.6.13",
     "nodemon": "^1.19.2",
